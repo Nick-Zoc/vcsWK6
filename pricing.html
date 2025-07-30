@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Unboxed - Sustainable and stylish clothing for everyone." />
+        <meta name="author" content="Unboxed" />
+        <title>Unboxed - Our Collections</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            body {
+                background-color: #f8f9fa; /* Light grey background */
+            }
+            .navbar {
+                background-color: #343a40 !important; /* Darker header */
+            }
+            .collections-section {
+                background-color: #ffffff; /* White background for the section */
+            }
+            .card-casual {
+                border: 1px solid #007bff; /* Blue border for Casual Wear */
+            }
+            .card-signature {
+                border: 1px solid #28a745; /* Green border for Signature */
+            }
+            .card-premium {
+                border: 1px solid #ffc107; /* Yellow border for Premium */
+            }
+            /* Unified button style for "Add to Cart" */
+            .btn-add-to-cart {
+                color: #007bff;
+                border-color: #007bff;
+                background-color: transparent; /* Ensure consistent background */
+            }
+            .btn-add-to-cart:hover {
+                color: #fff;
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+
+            .btn-primary-unboxed {
+                color: #fff;
+                background-color: #28a745;
+                border-color: #28a745;
+            }
+            .btn-primary-unboxed:hover {
+                background-color: #218838;
+                border-color: #1e7e34;
+            }
+            .btn-outline-warning-unboxed {
+                color: #ffc107;
+                border-color: #ffc107;
+            }
+            .btn-outline-warning-unboxed:hover {
+                color: #212529;
+                background-color: #ffc107;
+                border-color: #ffc107;
+            }
+            .product-image-placeholder {
+                width: 100%;
+                height: 180px; /* Increased height for better visual impact */
+                background-color: #e9ecef; /* Light grey for placeholders */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #6c757d;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                border-radius: .25rem;
+                overflow: hidden; /* Ensure images fit */
+                background-size: cover;
+                background-position: center;
+            }
+            /* Adjust spacing for collection titles */
+            .card h2.fw-bolder {
+                margin-bottom: 1rem !important; /* Reduce space after title */
+            }
+            .card p.text-muted {
+                margin-bottom: 1.5rem !important; /* Increase space after description */
+            }
+            .card-body {
+                display: flex;
+                flex-direction: column;
+            }
+            .card-body .list-unstyled {
+                margin-top: auto; /* Pushes the list to the bottom before the button */
+            }
+
+            /* New styles for product layout */
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+            .product-card {
+                border: 1px solid #e9ecef;
+                border-radius: .25rem;
+                overflow: hidden;
+                text-align: center;
+                transition: transform 0.2s;
+                height: 100%; /* Ensure cards are same height */
+                display: flex;
+                flex-direction: column;
+            }
+            .product-card:hover {
+                transform: translateY(-5px);
+            }
+            .product-card img {
+                width: 100%;
+                height: 200px; /* Fixed height for product images */
+                object-fit: cover;
+                border-bottom: 1px solid #e9ecef;
+            }
+            .product-card .card-body {
+                padding: 1rem;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .product-card .product-title {
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+            .product-card .product-price {
+                font-size: 1.2rem;
+                color: #28a745;
+                margin-bottom: 1rem;
+            }
+            .product-card .btn {
+                width: 100%;
+            }
+            .category-header {
+                font-size: 2.25rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+                color: #343a40;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html">Unboxed</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
+                                    <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="portfolio-overview.html">New Arrivals</a></li>
+                                    <li><a class="dropdown-item" href="portfolio-item.html">Best Sellers</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="bg-light py-5 collections-section">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">Explore Unboxed Collections</h1>
+                        <p class="lead fw-normal text-muted mb-0">Discover meticulously crafted clothing designed for every facet of your life, blending style, comfort, and ethical responsibility.</p>
+                    </div>
+
+                    <h2 class="category-header mt-5">The Casual Collection</h2>
+                    <div class="product-grid mb-5">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/600x400/e9ecef/6c757d?text=Unboxed+Tee" alt="Unboxed Tee" />
+                            <div class="card-body">
+                                <h5 class="product-title">Unboxed Everyday Tee</h5>
+                                <p class="text-muted small">Soft, breathable, and perfect for daily wear.</p>
+                                <div class="product-price">$29.99</div>
+                                <a class="btn btn-add-to-cart" href="#!">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/600x400/e9ecef/6c757d?text=Comfortable+Hoodie" alt="Comfortable Hoodie" />
+                            <div class="card-body">
+                                <h5 class="product-title">Cozy Comfort Hoodie</h5>
+                                <p class="text-muted small">Ultimate comfort for relaxed moments.</p>
+                                <div class="product-price">$59.99</div>
+                                <a class="btn btn-add-to-cart" href="#!">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="category-header mt-5">The Signature Collection</h2>
+                    <div class="product-grid mb-5">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/600x400/e9ecef/6c757d?text=Eco-Knit+Sweater" alt="Eco-Knit Sweater" />
+                            <div class="card-body">
+                                <h5 class="product-title">Eco-Knit Sustainable Sweater</h5>
+                                <p class="text-muted small">Crafted from ethically sourced, sustainable materials.</p>
+                                <div class="product-price">$89.99</div>
+                                <a class="btn btn-add-to-cart" href="#!">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/600x400/e9ecef/6c757d?text=Sustainable+Denim" alt="Sustainable Denim" />
+                            <div class="card-body">
+                                <h5 class="product-title">Conscious Denim Jeans</h5>
+                                <p class="text-muted small">Stylish and sustainable denim for a conscious choice.</p>
+                                <div class="product-price">$79.99</div>
+                                <a class="btn btn-add-to-cart" href="#!">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="category-header mt-5">The Premium Line</h2>
+                    <div class="product-grid mb-5">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/600x400/e9ecef/6c757d?text=Luxury+Silk+Blouse" alt="Luxury Silk Blouse" />
+                            <div class="card-body">
+                                <h5 class="product-title">Opulent Silk Blouse</h5>
+                                <p class="text-muted small">Experience the pinnacle of luxury with pure silk.</p>
+                                <div class="product-price">$149.99</div>
+                                <a class="btn btn-add-to-cart" href="#!">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/600x400/e9ecef/6c757d?text=Tailored+Wool+Trousers" alt="Tailored Wool Trousers" />
+                            <div class="card-body">
+                                <h5 class="product-title">Bespoke Wool Trousers</h5>
+                                <p class="text-muted small">Meticulously tailored for a superior fit and finish.</p>
+                                <div class="product-price">$189.99</div>
+                                <a class="btn btn-add-to-cart" href="#!">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Unboxed 2025</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
